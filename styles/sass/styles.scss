@@ -1,5 +1,6 @@
 // Abstract 
-@use "./abstract/varibales" as *;
+@use "./abstract/variables" as *;
+@use "./abstract/resultMediaQuery";
 
 // Base 
 @use "./base/defaultStyle";
@@ -7,6 +8,13 @@
 @use "./base/typography";
 
 // Components 
-
+@use "./components/hambuger";
+@use "./components/results/detailedRacerInfo";
+@use "./components/results/mainContainer";
+@use "./components/results/mainFrame";
+@use "./components/results/raceInfo";
+@use "./components/results/timeColorCode";
+@use "./components/results/topContainer";
+@use "./components/results/timerInfo";
 // Pages 
 @use "./pages/resultsVersion";

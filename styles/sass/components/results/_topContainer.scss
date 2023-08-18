@@ -1,0 +1,13 @@
+@use "../../abstract/variables" as *;
+
+.topContainer {
+    width: 95%;
+    padding: .5rem 0;
+    margin: 1rem 0 .5rem 0;
+    background-color: $colorTransparent;
+    background-size: contain;
+    box-shadow: -1px 1px 6px $colorDarkGreyBackground;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

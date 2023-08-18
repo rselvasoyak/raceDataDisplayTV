@@ -1,0 +1,16 @@
+@use "../../abstract/variables" as *;
+
+.resultsContainer {
+    border-style: solid;
+    border-width: 18px;
+    border-image-source: none;
+    border-image-repeat: round;
+    border-image-slice: fill;
+    background-color: $colorLightGreyBackground;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    box-shadow: -5px 5px 6px rgba($colorTextShadowDarkGrey, 0.2);
+
+}

@@ -1,0 +1,9 @@
+@use "../../abstract/variables" as *;
+
+.resultsMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorTransparent;
+    height: 100vh;
+}

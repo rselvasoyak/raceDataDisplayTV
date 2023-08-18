@@ -1,0 +1,61 @@
+@use "../abstract/variables" as *;
+
+// Hamburger Menu Styling
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Roboto', sans-serif;
+
+    .hamburger-icon {
+        width: 40px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .bar {
+            width: 100%;
+            height: 3px;
+            background-color: rgba($colorTextShadowDarkGrey, 0.5);
+        }
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: $colorBlueGreyBackground;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        padding: 20px 15px;
+        width: auto;
+
+        a {
+            color: $colorTextShadowDarkGrey;
+            font-size: $fontSizeInfo;
+            font-weight: $fontWeightMedium;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-bottom: 1.5px solid $colorBorderBottomGrey;
+
+            &:hover,
+            &:focus {
+                background-color: $colorLightGreyBackground;
+            }
+        }
+    }
+
+    &.menu-open {
+        .menu {
+            display: flex;
+        }
+    }
+}
