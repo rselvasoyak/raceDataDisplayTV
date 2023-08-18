@@ -1,3 +1,72 @@
+@media (max-width: 1350px) {
+  .hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    font-family: "Roboto", sans-serif;
+  }
+  .hamburger-menu .hamburger-icon {
+    width: 40px;
+    height: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+  }
+  .hamburger-menu .hamburger-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(52, 52, 52, 0.5);
+  }
+  .hamburger-menu .menu {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #9198af;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    padding: 25px 15px 30px 15px;
+    width: auto;
+  }
+  .hamburger-menu .menu a {
+    color: #343434;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px;
+    margin: 7px 1px;
+    border-bottom: 1.5px solid grey;
+    width: 6.2rem;
+  }
+  .hamburger-menu .menu a:hover, .hamburger-menu .menu a:focus {
+    background-color: rgba(217, 215, 215, 0.3);
+  }
+  .hamburger-menu.menu-open .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 @media (max-width: 880px) {
   .resultsContainer .topContainer .raceInfo h2 {
     font-size: 1.7rem;
@@ -177,6 +246,10 @@
   }
   .resultsContainer .detailedRacerInfo table {
     font-size: 1.6rem;
+  }
+  .resultsContainer .detailedRacerInfo table tbody tr td img {
+    margin: 0;
+    padding: 0;
   }
   .resultsContainer .detailedRacerInfo tbody tr td:nth-child(3n) {
     font-size: 1.6rem;
@@ -403,15 +476,11 @@ body {
 .hamburger-menu {
   position: fixed;
   top: 20px;
-  left: 20px;
+  left: 10px;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -450,7 +519,7 @@ body {
   position: absolute;
   top: 40px;
   left: 0px;
-  padding: 20px 15px;
+  padding: 25px 15px 30px 15px;
   width: auto;
 }
 .hamburger-menu .menu a {
@@ -458,8 +527,10 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px;
+  margin: 7px 1px;
   border-bottom: 1.5px solid grey;
+  width: 6.2rem;
 }
 .hamburger-menu .menu a:hover, .hamburger-menu .menu a:focus {
   background-color: rgba(217, 215, 215, 0.3);
@@ -554,6 +625,7 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-box-shadow: -5px 5px 6px rgba(52, 52, 52, 0.2);
           box-shadow: -5px 5px 6px rgba(52, 52, 52, 0.2);
+  max-width: 79vw;
 }
 
 .resultsMain {
@@ -602,7 +674,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 0;
   margin-top: 0.7rem;
-  font-weight: 700;
+  font-weight: 800;
   text-shadow: -0.5px 0.5px 2px #464545;
 }
 
@@ -676,10 +748,12 @@ body {
   margin: 0.5rem 0 0 0;
   text-align: center;
   color: rgb(223, 223, 223);
+  font-weight: 500;
   text-shadow: -2px 1px 2px #343434;
 }
 .timerInfo .timer time {
   font-size: 3.5rem;
+  font-weight: 500;
   margin-bottom: 0.22rem;
   color: rgb(223, 223, 223);
   text-shadow: -3px 1px 2px #464545;
@@ -688,6 +762,7 @@ body {
   width: 45%;
   height: 95%;
   font-size: 3.5rem;
+  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

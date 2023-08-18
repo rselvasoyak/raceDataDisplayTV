@@ -22,11 +22,13 @@
             margin: .5rem 0 0 0;
             text-align: center;
             color: $colorTextWhiteSmoke;
+            font-weight: $fontWeightMedium;
             text-shadow: -2px 1px 2px $colorTextShadowDarkGrey;
         }
 
         time {
             font-size: $fontSizeExtraLarge;
+            font-weight: $fontWeightMedium;
             margin-bottom: .22rem;
             color: $colorTextWhiteSmoke;
             text-shadow: -3px 1px 2px $colorTextShadowGrey;
@@ -37,6 +39,7 @@
         width: 45%;
         height: 95%;
         font-size: $fontSizeExtraLarge;
+        font-weight: $fontWeightMedium;
         display: flex;
         justify-content: center;
         align-items: center;

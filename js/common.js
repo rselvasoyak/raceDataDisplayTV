@@ -3,7 +3,7 @@ const toggleDataDisplay = (racerData) => {
     console.log(displayType)
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 300) {
+    if (screenWidth <= 600) {
         const additionalInfoElements1 = document.querySelectorAll('.switch1');
         const additionalInfoElements3 = document.querySelectorAll('.switch4');
 
@@ -53,6 +53,8 @@ const toggleDataDisplay = (racerData) => {
         });
 
         displayLeaderGap = !displayLeaderGap; 
+    } else {
+        window.location.reload();
     }
 };
 
@@ -90,6 +92,12 @@ const updateRaceTime = (raceTime) => {
     raceTimeElement.textContent = formattedRaceTime;
 };
 
+// Function to get the appropriate driver name based on screen width
+const getDriverName = (driver) => {
+    const screenWidth = window.innerWidth;
+    return screenWidth <= 600 ? driver.shortName : driver.name;
+};
+
 // Updating the Race Data Display table 
 const updateTableData = (racerData) => {
     console.log(racerData);
@@ -103,7 +111,7 @@ const updateTableData = (racerData) => {
             <td class="mobileExtra">${index + 7}</td>
             <td>
                 <img class="flag-${driver.countryCode}" alt=" ${driver.countryName} Flag" src="">
-                ${driver.name}
+                ${getDriverName(driver)}
             </td>
             <td>${driver.lap}</td>
             <td class="switch1 best data">${driver.currentTime}</td>
@@ -128,5 +136,6 @@ const updateTableData = (racerData) => {
         const flagElement = newRow.querySelector(`.flag-${driver.countryCode}`);
         fetchCountryFlagIcons(driver.countryCode, flagElement);
         table.appendChild(newRow);
+
     });
 };
